@@ -1,0 +1,80 @@
+<div class="accordion">
+
+  <div class="pizza-label">Pizza</div>
+
+  @for (item of items; track item.itemId) {
+
+    <button
+      class="header"
+      [class.active]="openSection === item.itemId"
+      (click)="toggle(item.itemId)">
+
+      <i
+        class="fa-solid icon-fa-angle"
+        [class.fa-angle-down]="openSection !== item.itemId"
+        [class.fa-angle-up]="openSection === item.itemId">
+      </i>
+
+      {{ item.name }}
+    </button>
+
+    @if (openSection === item.itemId) {
+
+      <div class="content">
+
+        @for (size of itemSizes; track size.sizeId) {
+
+          @let price = getPrice(item.itemId, size.sizeId);
+
+          <div class="size">
+
+            <button
+              class="checkbox"
+              (click)="toggleSize(item.itemId, size.sizeId)">
+
+              <i
+                class="checkbox-icon fa-solid"
+                [class.fa-square-check]="price?.enabled"
+                [class.fa-square]="!price?.enabled">
+              </i>
+
+            </button>
+
+            <p class="size-label">
+              {{ size.name }}
+            </p>
+
+            <div class="price-input">
+
+              <span class="currency">$</span>
+
+              <input
+                type="number"
+                step="0.01"
+                [disabled]="!price?.enabled"
+                [(ngModel)]="price!.price"
+                (ngModelChange)="saveToLocalStore()">
+
+            </div>
+
+          </div>
+
+        }
+
+        @if (hasChanges(item.itemId)) {
+          <button
+            class="refresh-icon-button"
+            (click)="undo(item.itemId)">
+
+            <i class="refresh-icon fa-solid fa-rotate-left"></i>
+
+          </button>
+        }
+
+      </div>
+
+    }
+  }
+
+</div>
+

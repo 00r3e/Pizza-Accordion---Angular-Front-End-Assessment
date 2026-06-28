@@ -1,0 +1,142 @@
+/* 
+--------------------------------Colors---------------------------------
+#E3F0F8
+#6190A8
+#7CA2B7
+#6291A9
+#29283C
+
+*/
+
+* {
+  box-sizing: border-box;
+  color: #29283C;
+}
+
+/* Accordion Styles */
+
+.accordion {
+  margin: 5px 10%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+}
+
+.pizza-label{
+  margin: 20px 0;
+  font-weight: bold;
+  padding-left: 4px;
+}
+
+.icon-fa-angle{
+  margin-right: 7px;
+}
+
+.header {
+  font-size: 16px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.header.active {
+  background: #E3F0F8; 
+  box-shadow: none;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.content {
+  position: relative;
+  background: #E3F0F8; 
+  margin-top: -8px;
+  padding: 16px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  margin-bottom: 7px;
+}
+
+/* Content Size Styles */
+
+.size{
+  width: 120px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 0px;
+}
+
+.checkbox{
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.checkbox-icon{
+  color: #7CA2B7;
+  font-size: 25px;
+}
+
+.size-label{
+  margin: 5px;
+  font-size: 16px;
+}
+
+.price-input {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #8eb2cb;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 95px;
+  height: 40px;
+}
+
+.currency {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 100%;
+  background: #7fa8c4;
+  color: white;
+  font-size: 16px;
+}
+
+.price-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+
+.refresh-icon-button {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 16px;
+  padding: 5px 7px;
+  color: #7CA2B7;
+  background: white;
+  border: 1px solid #7CA2B7;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.refresh-icon{
+  color: #7CA2B7;
+}

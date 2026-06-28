@@ -1,59 +1,60 @@
-# PizzaAccordionAngularFrontEndAssessment
+Pizza Accordion - Angular Front-End Assessment
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+Description:
 
-## Development server
+This project is a simple Angular application that displays pizza items in an accordion. Each pizza contains three sizes (Small, Medium, Large), and each size has its own price.
 
-To start a local development server, run:
+The application allows users to:
 
-```bash
+Expand or collapse pizza sections.
+Enable or disable individual pizza sizes.
+Edit pizza prices.
+Restore the original prices using the Undo button.
+Persist changes using the browser's localStorage.
+
+Technologies:
+Angular
+TypeScript
+HTML
+CSS
+
+Project Structure:
+src/app
+│
+├── components/
+│   └── pizza-accordion/
+│
+├── services/
+│   └── pizza.service.ts
+│
+├── models/
+│   └── interfaces.ts
+│
+└── data/
+    └── pizza-data.ts
+
+Installation
+Clone the repository.
+
+Install dependencies:
+npm install
+
+Run the application:
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser at:
+http://localhost:4200
 
-## Code scaffolding
+Features:
+Accordion interface
+Editable pizza prices
+Enable/Disable pizza sizes
+Undo changes
+Automatic saving to localStorage
+Responsive and clean UI
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Notes:
+Initial pizza data is stored in the data folder.
+Interfaces are defined in the models folder.
+Data is provided through PizzaService.
+User changes are saved in localStorage and restored when the application is reopened.
