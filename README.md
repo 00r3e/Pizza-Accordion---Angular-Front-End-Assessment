@@ -23,28 +23,17 @@ src/app
 
 
 │
-
 ├── components/
-
 │   └── pizza-accordion/
-
 │
-
 ├── services/
-
 │   └── pizza.service.ts
-
 │
-
 ├── models/
-
 │   └── interfaces.ts
-
 │
-
 └── data/
-
-    └── pizza-data.ts
+  └── pizza-data.ts
 
 Installation
 Clone the repository.
