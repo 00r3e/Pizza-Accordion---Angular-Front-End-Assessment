@@ -13,6 +13,7 @@ Restore the original prices using the Undo button.
 Persist changes using the browser's localStorage.
 
 Technologies:
+
 Angular
 TypeScript
 HTML
@@ -20,8 +21,6 @@ CSS
 
 Project Structure:
 src/app
-
-
 │
 
 ├── components/
@@ -43,9 +42,11 @@ src/app
 │
 
 └── data/
-  └── pizza-data.ts
 
-Installation
+│  └── pizza-data.ts
+
+Installation:
+
 Clone the repository.
 
 Install dependencies:
@@ -58,6 +59,7 @@ Open your browser at:
 http://localhost:4200
 
 Features:
+
 Accordion interface
 Editable pizza prices
 Enable/Disable pizza sizes
@@ -66,6 +68,7 @@ Automatic saving to localStorage
 Responsive and clean UI
 
 Notes:
+
 Initial pizza data is stored in the data folder.
 Interfaces are defined in the models folder.
 Data is provided through PizzaService.
